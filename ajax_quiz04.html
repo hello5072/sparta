@@ -17,6 +17,7 @@
         function q1() {
             let number = $('#magicnum').val()
             let url2 = "http://numbersapi.com/"+number
+            $('#meaning').empty()
 
             $.ajax({
                 type: "GET",
