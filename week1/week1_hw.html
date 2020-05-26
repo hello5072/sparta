@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+
+        .wrap {
+            width: 800px;
+            margin: auto;
+        }
+
+        .aligh_center {
+            width: 500px;
+            margin: auto;
+        }
+
+        .aligh_button_center {
+            width: 500px;
+            margin: auto auto auto 300px;
+        }
+
+        .space {
+            margin: 20px 0 20px 0;
+        }
+
+        .subtitle {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function hey() {
+            alert('주문이 완료되었습니다')
+        }
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="aligh_center">
+            <img src="https://s3.images-iherb.com/msf/msf71732/w/3.jpg" width="400">
+        </div>
+        <div class="space">
+            <span class="subtitle">MusclePharm, 컴뱃 100% 유청 단백질 </span>
+            <span>가격 : 32,700원 / 개</span>
+            <p class="explain">컴뱃 100% Whey는 100% 유청 단백질을 함유한 울트라 프리미엄 혼합물입니다. 순수 근육을 유지하고 운동 후 영양소 보충을 원하는 운동 수를 위한
+                제품입니다. 맛이 뛰어나고 쉽게 섞여서 근육 회복과 운동 능력을 향상시킵니다.</p>
+        </div>
+        <div>
+            <h2>주문하기</h2>
+        </div>
+        <form>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">주문자 성함:</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">수량</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>--수량을 선택하세요--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">주소:</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">전화번호:</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="aligh_button_center">
+                <button class="btn btn-primary" onclick="hey()" type="submit">주문하기</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
