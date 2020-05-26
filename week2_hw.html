@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>2주차 숙제</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -53,37 +54,52 @@
             font-size: 30px;
             font-weight: bold;
         }
+
+        .exchange_rate {
+            color: blue;
+        }
     </style>
 
     <script>
         function hey() {
             let value_name = $('#input_check_name').val();
             let value_count = $('#input_check_count').val();
-            let value_address = $('#input_check_name').val();
-            let value_contact = $('#input_check_name').val();
-            
+            let value_address = $('#input_check_address').val();
+            let value_contact = $('#input_check_contact').val();
+
             if (value_name == '') {
                 alert('이름을 입력하세요');
-                return
             }
-            else if (value_count =='') {
+            else if (value_count == '--수량을 선택하세요--') {
                 alert('수량을 선택하세요');
-                return
             }
-            else if (value_address =='') {
-                alert('수량을 입력하세요');
-                return
+            else if (value_address == '') {
+                alert('주소을 입력하세요');
             }
-            else if (value_contact =='') {
-                alert('수량을 입력하세요');
+            else if (value_contact == '') {
+                alert('전화번호를 입력하세요');
             }
             else {
                 alert('주문이 완료되었습니다');
             }
-
-            
-            
         }
+        // 윈도우 로딩되면 자동실행 코드입니다
+        window.onload = function () {
+            //환율 정보 api를 위한 코드입니다 (하단)
+            $.ajax({
+                type: "GET",
+                url: "https://api.manana.kr/exchange/rate.json",
+                data: {},
+                success: function (response) {
+                    let last_updated = response[1]['date'];
+                    let dollar_won = response[1]['rate'];
+                    $('#dollar_rate').prepend(last_updated);
+                    $('#dollar_rate').append(dollar_won+'원');
+                }
+            })
+        }
+
+
     </script>
 
     <title>Document</title>
@@ -97,8 +113,11 @@
         <div class="space">
             <span class="subtitle">MusclePharm, 컴뱃 100% 유청 단백질 </span>
             <span>가격 : 32,700원 / 개</span>
-            <p class="explain">컴뱃 100% Whey는 100% 유청 단백질을 함유한 울트라 프리미엄 혼합물입니다. 순수 근육을 유지하고 운동 후 영양소 보충을 원하는 운동 수를 위한
+            <p class="explain">컴뱃 100% Whey는 100% 유청 단백질을 함유한 울트라 프리미엄 혼합물입니다. 순수 근육을 유지하고 운동 후 영양소 보충을 원하는 운동 선수를 위한
                 제품입니다. 맛이 뛰어나고 쉽게 섞여서 근육 회복과 운동 능력을 향상시킵니다.</p>
+        </div>
+        <div>
+            <h4 class="exchange_rate" id="dollar_rate">&nbsp;기준 달러-원 환율:&nbsp;</h4>
         </div>
         <div>
             <h2>주문하기</h2>
@@ -130,14 +149,14 @@
                     <span class="input-group-text" id="inputGroup-sizing-default">주소:</span>
                 </div>
                 <input type="text" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default">
+                    aria-describedby="inputGroup-sizing-default" id="input_check_address">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">전화번호:</span>
                 </div>
                 <input type="text" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default">
+                    aria-describedby="inputGroup-sizing-default" id="input_check_contact">
             </div>
             <div>
                 <button class="btn btn-primary btn_center" onclick="hey()" type="submit">주문하기</button>
