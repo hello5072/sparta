@@ -124,52 +124,46 @@
     <div class="wrap">
         <div class="img"></div>
         <div class="info">
-            <h1>어떤 과목이 꿀과목인지 알아보세요</h1>
+            <h1>PolyU 꿀 Special Elective 찾기</h1>
             <p></p>
         </div>
         <div class="info">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">제목</span>
-                </div>
-                <input type="text" class="form-control" id="title" aria-describedby="basic-addon3">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">전공을 선택하세요</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>MM</option>
+                    <option>AF</option>
+                    <option>LGT</option>
+                </select>
             </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">저자</span>
-                </div>
-                <input type="text" class="form-control" id="author" aria-describedby="basic-addon3">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">리뷰</span>
-                </div>
-                <textarea class="form-control" aria-describedby="basic-addon3" name="bookReview" id="review" cols="30"
-                    rows="5" placeholder="140자까지 입력할 수 있습니다." onkeyup="is_long(this)"></textarea>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">과목 레벨을 선택하세요</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
             </div>
             <div class="order">
-                <button onclick="make_review()" type="button" class="btn btn-primary">리뷰 작성하기</button>
+                <button onclick="make_review()" type="button" class="btn btn-primary">꿀과목 찾기</button>
             </div>
         </div>
-        <div class="orders">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">제목</th>
-                        <th scope="col">저자</th>
-                        <th scope="col">리뷰</th>
-                    </tr>
-                </thead>
-                <tbody id="orders-box">
-                    <tr>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                </tbody>
-            </table>
+        <p>&nbsp;</p>
+        <div class="info">
+            <h1>새 리뷰 남기기</h1>
+            <p>&nbsp;</p>
+            <div class="order">
+                <button onclick="make_review()" type="button" class="btn btn-primary">꿀과목 찾기</button>
+            </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
         </div>
     </div>
+
 </body>
 
 </html>

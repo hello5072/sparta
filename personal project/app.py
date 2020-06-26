@@ -23,3 +23,8 @@ def read_reviews():
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
+
+
+
+
+# {'전공':'MM', '레벨':'2', '과목코드': "MM2234", "과목명": "Example", "평점": 3.0}
