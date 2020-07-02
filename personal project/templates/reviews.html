@@ -3,7 +3,7 @@
 
 <head>
     <!-- Webpage Title -->
-    <title>리뷰 남기기</title>
+    <title>검색 결과 보기</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -87,6 +87,10 @@
             width: 500px;
             margin: auto;
         }
+        .wrap2 {
+            width: auto;
+            margin: 300px 100px 300px 100px;
+        }
 
         .img {
             background-image: url('https://previews.123rf.com/images/maxxyustas/maxxyustas1511/maxxyustas151100002/47858355-education-concept-books-and-textbooks-on-the-bookshelf-3d.jpg');
@@ -117,70 +121,82 @@
         .orders {
             margin-top: 100px;
         }
+        
     </style>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="img"></div>
         <div class="info">
-            <h1>새 리뷰 남기기</h1>
+            <h1>PolyU 꿀과목입니다~</h1>
             <p></p>
         </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                과목 이름
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
         <div class="info">
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">전공을 선택하세요</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option></option>
-                    <option>MM</option>
-                    <option>AF</option>
-                    <option>LGT</option>
-                </select>
+            <h1>새 리뷰 남기기</h1>
+            <p>&nbsp;</p>
+            <div class="order">
+                <button onclick="make_review()" type="button" class="btn btn-primary">새 리뷰 남기기</button>
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">과목 레벨을 선택하세요</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option></option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">과목 코드를 입력해주세요</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-              </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">과목 평점을 선택하세요 (10점 만점)</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option></option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">과목에 대한 본인의 생각은?</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-              </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
         </div>
-        <div class="order">
-            <button onclick="make_review()" type="button" class="btn btn-primary">리뷰 남기기</button>
+    </div>
+    <div class="wrap2">
+        <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <h1 id="new-review">새 리뷰 남기기</h1>
+            <p>&nbsp;</p>
+            <div class="order">
+                <button onclick="make_review()" type="button" class="btn btn-primary">새 리뷰 남기기</button>
+            </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
         </div>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-
     </div>
-    </div>
-
+    
 </body>
 
 </html>
