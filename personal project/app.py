@@ -10,6 +10,10 @@ db = client.dbsparta                      # 'dbsparta'라는 이름의 db를 만
 def home():
     return render_template('index.html')
 
+@app.route('/new')
+def new():
+    return render_template('new.html')
+
 ## API 역할을 하는 부분
 @app.route('/reviews', methods=['POST'])
 def write_review():
